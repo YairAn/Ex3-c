@@ -6,14 +6,14 @@ FLAGS = -Wall -g
 # $< - the first name in the dependencies list
 # $^ - the right side of :
 
-all: textfind isort
-txtfind: main.o textfind.o
+all: txtfind isort
+txtfind: main.o txtfind.o
 	$(CC) $(FLAGS) -o $@ $^
 isort: mainIsort.o isort.o
 	$(CC) $(FLAGS) -o $@ $^
-textfind.o: textfind.c textfind.h
+txtfind.o: txtfind.c txtfind.h
 	$(CC) $(FLAGS) -fPIC -c $<
-main.o: main.c textfind.h
+main.o: main.c txtfind.h
 	$(CC) $(FLAGS) -c $<
 isort.o: isort.c isort.h
 	$(CC) $(FLAGS) -fPIC -c $<
@@ -23,4 +23,4 @@ mainIsort.o: mainIsort.c isort.h
 .PHONY: clean all
 
 clean:
-	rm -f *.o textfind isort
+	rm -f *.o txtfind isort

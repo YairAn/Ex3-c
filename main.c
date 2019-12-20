@@ -3,7 +3,7 @@
 #include <stdio.h>
 #define LINE 256
 #define WORD 30
-#include "textfind.h"
+#include "txtfind.h"
 
 int main()
 {
