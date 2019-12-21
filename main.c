@@ -8,10 +8,10 @@
 int main()
 {
     char str [LINE];
-    char AorB ;
+    char *AorB ;
     int x= Getword(str);
     int y= Getword(AorB);
-    if(AorB=='a') print_lines(str);
-    if (AorB=='b')print_similar_words(str);
+    if(*AorB=='a') print_lines(str);
+    if (*AorB=='b')print_similar_words(str);
     return 0;
 }

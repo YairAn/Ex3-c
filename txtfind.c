@@ -119,11 +119,4 @@ void print_lines(char * str)
 
 
 
-int main()
-{
 
-
- return 0;
- 
-}
- 
